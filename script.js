@@ -24,9 +24,11 @@ generateBtn.addEventListener("click",function() {
  var pwl = prompt("Please select password length. Must be between 8-128 characters.");
  console.log(pwl);
 if(pwl <8 || pwl>128) {
+//if pw isn't long enough ask question again 
  pwl = prompt("Password must be between 8-128 characters.");
 }
 else {
+//password questions
  pwlc = prompt("Do you want to include lowercase characters?(Y/N)");
  pwuc = prompt("Do you want to include uppercase characters?(Y/N)");
  pwnc = prompt("Do you want to include numeric characters?(Y/N)");
@@ -62,8 +64,8 @@ if(pwsc == ("y","Y","Yes","yes")){
 else {
   pwscg ==false;
 };
-
-
+//turn boolean into criteria selector to generate pw.
+//generate pw and send to the html
 function generatePassword() { 
   for ( i = 0; i < pwl; i++);
   const random = Math.floor(Math.random() * pwlcg.length);
